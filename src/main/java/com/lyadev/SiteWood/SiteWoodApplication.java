@@ -1,13 +1,13 @@
-package com.lyadev.WoodSite;
+package com.lyadev.SiteWood;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WoodSiteApplication {
+public class SiteWoodApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WoodSiteApplication.class, args);
+		SpringApplication.run(SiteWoodApplication.class, args);
 	}
 
 }
