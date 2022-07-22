@@ -7,7 +7,14 @@ plugins {
 group = 'com.lyadev'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
-
+jar {
+	manifest {
+		attributes(
+				'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+				'Main-Class': 'com.lyadev.WoodSite.WoodSiteApplication'
+		)
+	}
+}
 repositories {
 	mavenCentral()
 }
