@@ -1,4 +1,4 @@
-package com.lyadev.SiteWood.api.Entity;
+package com.lyadev.SiteWood.Entity;
 
 import javax.persistence.*;
 
@@ -18,13 +18,13 @@ public class WoodEntity {
     private String Image;
 
     @Column(name = "thickness")
-    private float Thickness;
+    private Long Thickness;
 
-    @Column(name = "long")
-    private float _Long;
+    @Column(name = "longi")
+    private Long longi;
 
     @Column(name = "width")
-    private float Width;
+    private Long Width;
 
     @Column(name = "sort")
     private String Sort;
@@ -34,6 +34,10 @@ public class WoodEntity {
 
     @Column(name = "price")
     private int Price;
+
+    public WoodEntity(){
+
+    }
 
     public Long getId() {
         return id;
@@ -59,27 +63,27 @@ public class WoodEntity {
         Image = image;
     }
 
-    public float getThickness() {
+    public Long getThickness() {
         return Thickness;
     }
 
-    public void setThickness(float thickness) {
+    public void setThickness(Long thickness) {
         Thickness = thickness;
     }
 
-    public float get_Long() {
-        return _Long;
+    public Long getLongi() {
+        return longi;
     }
 
-    public void set_Long(float _Long) {
-        this._Long = _Long;
+    public void setLongi(Long longi) {
+        this.longi = longi;
     }
 
-    public float getWidth() {
+    public Long getWidth() {
         return Width;
     }
 
-    public void setWidth(float width) {
+    public void setWidth(Long width) {
         Width = width;
     }
 
