@@ -13,7 +13,6 @@ public class fileservice {
       deflater.setLevel(Deflater.BEST_COMPRESSION);
       deflater.setInput(data);
       deflater.finish();
-
       ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);
       byte[] tmp = new byte[4*1024];
       while (!deflater.finished()){
