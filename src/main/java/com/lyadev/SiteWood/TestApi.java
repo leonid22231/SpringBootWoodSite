@@ -43,10 +43,8 @@ public class TestApi {
     @GetMapping("/getAll")
     public ResponseEntity getAll(){
         try {
-            for(int i = 0;i < woodService.getAll().size();i++) {
-                ResponseEntity.ok(woodService.getAll().get(i));
-            }
-            return null;
+
+            return ResponseEntity.ok(woodService.getAll());
         }catch (Exception e){
             return ResponseEntity.badRequest().body("Ошибка " + e);
         }
