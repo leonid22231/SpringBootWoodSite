@@ -38,5 +38,4 @@ public class fileservice {
       return outputStream.toByteArray();
   }
 
-
 }
