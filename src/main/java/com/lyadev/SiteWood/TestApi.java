@@ -44,7 +44,7 @@ public class TestApi {
     public ResponseEntity getAll(){
         try {
             for(int i = 0;i < woodService.getAll().size();i++) {
-                return ResponseEntity.ok(woodService.getAll().get(i));
+                ResponseEntity.ok(woodService.getAll().get(i));
             }
             return null;
         }catch (Exception e){
