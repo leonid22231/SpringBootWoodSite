@@ -2,7 +2,7 @@ package com.lyadev.SiteWood.Entity;
 
 import javax.persistence.*;
 
-@Entity(name = "wood")
+@Entity(name = "Testing")
 @Table(name = "wood")
 public class WoodEntity {
 
