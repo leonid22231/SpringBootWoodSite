@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<Html lang="en_US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Главная страница</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <meta http-equiv="refresh" content="100" >
+    <meta charset="utf-8">
+</head>
+<body>
+<header id="Head">
+    <script type="text/javascript" src="css/src/HideHeader.js"></script>
+    <div class="Search">
+        <form id="form">
+            <input type="text" name="search" class="search" placeholder="Введите название товара">
+            <button>Найти</button>
+        </form>
+    </div>
+    <nav>
+        <a class ="back" onclick="history.go(-1)">↶ Вернуться назад</a>
+        <a href="Main" class="active">Товары</a>
+        <a href="Delivery">Доставка</a>
+        <a href="Contact">Контакты</a>
+        <a href="About">О компании</a>
+    </nav>
+</header>
+<div class="content">
+    <div class="product" id="product">
+        <img th:src="'/api/v1/file/'+${img}" width="250" height="250" id="product_image">
+        <div class="product_option" id="product_option">
+            <p>Имя<p>
+            <p>Толщина<p>
+            <p>Длина<p>
+            <p>Ширина<p>
+            <p>Сорт<p>
+            <p>Форма<p>
+            <p>Цена<p>
+        </div>
+        <div class="product_option_value" id="product_option_value">
+            <p th:text="${name}"><p>
+            <p th:text="${thickness}"><p>
+            <p th:text="${long}"><p>
+            <p th:text="${width}"><p>
+            <p th:text="${sort}"><p>
+            <p th:text="${form}"><p>
+            <p th:text="${price}"><p>
+        </div>
+    </div>
+</div>
+</body>
+</Html>

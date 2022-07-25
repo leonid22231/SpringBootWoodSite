@@ -1,8 +1,10 @@
 package com.lyadev.SiteWood.Entity;
 
+import org.springframework.boot.context.properties.bind.Name;
+
 import javax.persistence.*;
 
-@Entity(name = "Testing")
+@Entity()
 @Table(name = "wood")
 public class WoodEntity {
 

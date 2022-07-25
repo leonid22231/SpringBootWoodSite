@@ -1,82 +1,39 @@
-html, body, div, span, applet, object, iframe,
+body, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
+fieldset, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-
   margin: 0;
   padding: 0;
   border: 0;
   font: inherit;
   font-size: 100%;
-  vertical-align: baseline;
+  
 }
-
-html {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 #Head.hide{
-top: -168px;
+top: -128px;
 }
 body {
-  background-color: #C8C8C8;
   font-family: helvetica, arial, sans-serif;
   font-size: 16px;
-  padding-top: 330px;
-  -moz-transition: padding-top 0.5s ease;
-  -o-transition: padding-top 0.5s ease;
-  -webkit-transition: padding-top 0.5s ease;
-  transition: padding-top 0.5s ease;
+  padding-top: 188px;
 }
 body::-webkit-scrollbar{
   display: none;
 }
-
 header {
   width: 100%;
   height: 188px;
@@ -101,8 +58,18 @@ header h1 {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+#form{
+  display: inline;
+  height: auto;
+  width: auto;
+  position: absolute;
+}
 .Search{
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 128px;
+  width: 100%;
 }
 .Search input[type=text] {
   padding: 5px;
@@ -110,13 +77,6 @@ header h1 {
   height: 50px;
   outline: none;
   font-size: 24px;
-}
-.Search input[type=text] {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 .Search input[type=text] {
 	border-top: 0.5px solid #989898;
@@ -133,7 +93,6 @@ header h1 {
   padding: 5px;
   height: 50px;
   width: 128px;
-  margin-top: 82px;
   margin-left: -5px;
   background: #21b11d;
   color: #fff;
@@ -190,7 +149,6 @@ h2 {
 }
 
 p {
-  margin-bottom: 2rem;
   line-height: 2;
   color: #7f8c8d;
 }
@@ -211,26 +169,63 @@ section {
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
+.content{
+  display: inline-block;
+  min-height: fit-content;
+  min-width: fit-content;
+}
 .All{
   display: grid;
-  table-layout: fixed;
-  grid-template-columns: 30% 30% 30%;
-  grid-gap: 10px;
+  grid-column-gap: 5%;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-auto-rows: minmax(min-content, max-content);
+  padding-top: 3%;
   justify-content: center;
+  width: 80%;
+  min-height: 100%;
+  margin: auto;
+  background-position: center;
+  background: #D9D9D9;
+  
 }
 .Product{
+  display: inline-block;
   text-align: center;
-
+  width: 100%;
+  height: auto;
 }
 .Product img{
-  width: 80%;
+  width: 100%;
   height: 80%;
 }
-.Product p{
+.Product a{
   font-size: 14px;
+  margin: auto;
   color: green;
+  cursor: pointer;
+  text-decoration: underline;
+  width: fit-content;
+  height: fit-content;
 }
-
+header nav a.back{
+  margin: 0;
+  cursor: pointer;
+  width: fit-content;
+}
+#product{
+  display: inline-flex;
+}
+#product_image{
+  display: inline-block;
+}
+#product_option{
+margin-left: 50px;
+  display: inline-block;
+}
+#product_option_value{
+margin-left: 50px;
+  display: inline-block;
+}
 /* Sticky Header Style */
 /* ---------------------------------------- */
 body.sticky-header {
