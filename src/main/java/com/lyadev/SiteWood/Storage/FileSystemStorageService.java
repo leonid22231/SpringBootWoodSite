@@ -1,5 +1,6 @@
 package com.lyadev.SiteWood.Storage;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -42,8 +43,11 @@ public class FileSystemStorageService implements StorageService {
                         "Cannot store file outside current directory.");
             }
             try (InputStream inputStream = file.getInputStream()) {
+                File file_ = new File(String.valueOf(destinationFile));
+                file_.createNewFile();
                 Files.copy(inputStream, destinationFile,
                         StandardCopyOption.REPLACE_EXISTING);
+
             }
         }
         catch (IOException e) {

@@ -73,7 +73,6 @@ public class TestApi {
     public ResponseEntity<Resource> serveFile(@PathVariable String filename) throws IOException {
 
         Resource file = storageService.loadAsResource(filename);
-        System.out.println(file.getURL());
         return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(file);
     }
 
