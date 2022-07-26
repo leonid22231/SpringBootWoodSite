@@ -18,7 +18,7 @@ public class SiteWoodApplication {
 	@Bean
 	CommandLineRunner init(StorageService storageService) {
 		return (args) -> {
-			storageService.init();
+			//storageService.init();
 		};}
 
 }
