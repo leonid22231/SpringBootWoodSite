@@ -45,6 +45,7 @@ public class FileSystemStorageService implements StorageService {
             try (InputStream inputStream = file.getInputStream()) {
                 File file_ = new File(String.valueOf(destinationFile));
                 file_.createNewFile();
+                System.out.println(destinationFile);
                 Files.copy(inputStream, destinationFile,
                         StandardCopyOption.REPLACE_EXISTING);
 
